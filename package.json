@@ -1,0 +1,34 @@
+{
+  "name": "assurincome",
+  "version": "1.0.0",
+  "description": "Assur Income MVP web application",
+  "main": "index.js",
+  "scripts": {
+	"test": "mocha",
+	"build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slogen123/assurincome.git"
+  },
+  "author": "Andrew Altamirano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slogen123/assurincome/issues"
+  },
+  "homepage": "https://github.com/slogen123/assurincome#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bulma": "^0.6.0",
+    "css-loader": "^0.28.7",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "joi": "^13.0.1",
+    "mocha": "^4.0.1",
+    "moment": "^2.19.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "validatorjs": "^3.13.5",
+    "webpack": "^3.8.1"
+  }
+}
