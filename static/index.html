@@ -19,7 +19,7 @@
 				Total Income**
 			</p>
 		</div><br />
-		<table class="table is-fullwidth is-striped is-hoverable">
+		<table class="table is-fullwidth is-hoverable">
 			<thead>
 				<tr class="no-border">
 					<th colspan="3"></th>
@@ -41,6 +41,20 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td colspan="12" id="apiError" v-show="!successResponse">
+						<div class="notification is-danger">
+							<strong>An unknown error occurred.</strong> Please try your request again.
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="12" id="noContractWarning" v-show="percentageTooLowWarning">
+						<div class="notification is-warning">
+							<strong>No contract available for selected percentages.</strong> Please increase the percentages below to determine an available contract.
+						</div>
+					</td>
+				</tr>
 				<tr>
 					<td>
 						<div class="select is-small">
