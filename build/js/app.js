@@ -15,7 +15,8 @@ var app = new Vue({
 		remitRate50K: "0.30",
 		status: null,
 		price: null,
-		errorMsg: null
+		errorMsg: null,
+		percentageTooLowWarning: false
 	},
 	mounted: function() {
 		this.getRate();
@@ -35,10 +36,19 @@ var app = new Vue({
 			.then(function(response) {
 				// success callback
 				this.status = response.status;
-				this.price = response.body.price;
+				this.price = parseFloat(response.body.price);
+				if (this.price < 0)
+				{
+					this.percentageTooLowWarning = true;
+				} else {
+					this.percentageTooLowWarning = false;
+				}
+				
 			}, function(response) {
 				// error callback
 				this.status = 400;
+				this.price = null;
+				this.percentageTooLowWarning = false;
 			})
 		}
 	},
@@ -53,9 +63,23 @@ var app = new Vue({
 		formattedRate: function() {
 			if (this.price == null)
 			{
-				return '$--'
+				return '';
+			}
+			if (this.price < 0)
+			{
+				return '';
 			}
 			return '$' + parseFloat(this.price).toLocaleString();
+		},
+		successResponse: function() {
+			if (this.status != null)
+			{
+				if (this.status != 200)
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 	},
 	watch: {
