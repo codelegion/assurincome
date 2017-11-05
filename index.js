@@ -7,6 +7,7 @@ let calculator	= require('./calculator');
 
 app.use(express.static('static'));
 app.use(bodyParser.json());
+app.set('trust proxy', true);
 
 
 app.get('/', function(req, res) {
