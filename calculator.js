@@ -46,6 +46,15 @@ class Calculator {
 				errors: error
 			}
 		} else {
+
+			termLength = parseInt(termLength);
+			remitRate100M = parseFloat(remitRate100M);
+			remitRate10M = parseFloat(remitRate10M);
+			remitRate1M = parseFloat(remitRate1M);
+			remitRate100K = parseFloat(remitRate100K);
+			remitRate75K = parseFloat(remitRate75K);
+			remitRate50K = parseFloat(remitRate50K);
+
 			let price = this.getRate(remitRate100M, remitRate10M, remitRate1M, remitRate100K, remitRate75K, remitRate50K) * (1 - this.getRateFactor(termLength));
 			let roundedValue = Math.round(price);
 			return {
