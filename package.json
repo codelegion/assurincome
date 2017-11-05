@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/slogen123/assurincome.git"
+  },
+  "engines": {
+    "node": "8.x"
   },
   "author": "Andrew Altamirano",
   "license": "ISC",
