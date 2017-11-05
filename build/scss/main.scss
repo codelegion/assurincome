@@ -1,0 +1,45 @@
+@import '~bulma/sass/utilities/initial-variables';
+
+@import '~bulma';
+@import '~rrssb/scss/rrssb';
+
+.variables {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.variables:hover {
+	background: #fafafa;
+}
+
+.is-bottom {
+	align-items: flex-end;
+}
+
+.icon svg path {
+	fill: #fff;
+	height: 16px;
+	width: 16px;
+}
+
+.is-twitter-button {
+	background: $rrssb-twitter;
+	color: #fff;
+	border-color: transparent !important;
+}
+
+.is-facebook-button {
+	background: $rrssb-facebook;
+	color: #fff;
+	border-color: transparent !important;
+}
+
+.is-linkedin-button {
+	background: $rrssb-linkedin;
+	color: #fff;
+	border-color: transparent !important;
+}
+
+tr.no-border th {
+	border-width: 0;
+}

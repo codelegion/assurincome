@@ -3,9 +3,9 @@ const ExtractSass = new ExtractTextPlugin('static/app.css');
 const path = require('path');
 
 module.exports = {
-	entry: ['./build/scss/main.scss'],
+	entry: ['./build/scss/main.scss', './build/js/app.js'],
 	output: {
-		filename: 'app.js'
+		filename: 'static/app.js'
 	},
 	module: {
 		rules: [{
