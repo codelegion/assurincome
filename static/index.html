@@ -9,6 +9,39 @@
 </head>
 
 <body>
+	<nav id="navbar" class="navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<button class="button navbar-burger" data-target="navMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="navbar-menu" id="navMenu">
+				<div class="navbar-end">
+					<a class="navbar-item" href="#">Home</a>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link" href="#">About Us</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="#">Alex Johnson</a>
+							<a class="navbar-item" href="#">Todd Johnson</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link" href="#">Resources</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="#">Instructions</a>
+							<a class="navbar-item" href="#">Media Coverage</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="#">The Contract</a>
+					<a class="navbar-item" href="#">Contact Us</a>
+					<a class="navbar-item" href="#">Sign In</a>
+				</div>
+			</div>
+		</div>
+	</nav>
 	<section class="section" id="app">
 		<div class="container has-text-centered">
 			<h1 class="title is-spaced">Create Your Own, Customized Fairness</h1>
@@ -37,7 +70,7 @@
 					<th class="has-text-centered is-size-7 has-text-weight-bold"><strong class="has-text-info">at $75K</strong> Breakpoint of <strong class="has-text-info">Total Income?</strong></th>
 					<th class="has-text-centered is-size-7 has-text-weight-bold"><strong class="has-text-info">at $50K</strong> Breakpoint of <strong class="has-text-info">Total Income?</strong></th>
 					<th class="has-text-centered is-size-7 has-text-weight-bold">Upfront Fees</th>
-					<th class="has-text-centered is-size-7 has-text-weight-bold">Payment (AssurIncome) You Receive If Your Total Income is Less Than $50,000</th>
+					<th class="has-text-centered is-size-7 has-text-weight-bold">Payment (AssurIncome) You Are Eligible To Receive If Your Total Income is Less Than $50,000</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -723,13 +756,13 @@
 						<strong>$0</strong>
 					</td>
 					<td class="has-text-centered">
-						<strong class="has-text-success" v-text="formattedRate">$--</strong>
-						<button class="button is-primary is-small is-pulled-right" disabled>Checkout</button>
+						<strong class="has-text-success" v-text="formattedRate">$--</strong><br /><br />
+						<button class="button is-small is-warning" disabled>Add Another Year</button><br /><br />
+						<button class="button is-primary is-small" disabled>Checkout</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<button class="button is-small is-warning is-pulled-right" disabled>Add Another Year</button>
 	</section>
 	<section class="section">
 		<div class="container has-text-centered">
