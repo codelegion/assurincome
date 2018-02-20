@@ -11,16 +11,13 @@ app.set('trust proxy', true);
 
 
 app.get('/', function(req, res) {
-	res.sendFile('static/index.html');
-});
-
-app.get('/option2', function(req, res) {
-	res.sendFile('static/option2.html', {
+	res.sendFile('views/landing.html', {
 		root: __dirname
 	});
 });
-app.get('/option3', function (req, res) {
-	res.sendFile('static/option3.html', {
+
+app.get('/start', function(req, res) {
+	res.sendFile('views/index.html', {
 		root: __dirname
 	});
 });

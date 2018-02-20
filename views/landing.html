@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AssurIncome</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="flag-icon.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<section class="section" id="landing">
+			<div class="column is-half is-offset-one-quarter">
+				<h3>Please Select Your Country of Residence</h3><br />
+				<div class="field has-addons">
+					<div class="control is-expanded">
+						<div class="is-fullwidth">
+							<v-select :options="countryDropdown" label="Name" v-model="selected">
+								<template slot="option" slot-scope="option">
+									<span :class="cssClass(option)"></span>
+									{{ option.Name }}
+								</template>
+								<template slot="selected-option" slot-scope="option">
+									<span :class="cssClass(option)"></span>
+									{{ option.Name }}
+								</template>
+							</v-select>
+						</div>
+					</div>
+					<div class="control">
+						<button type="button" class="button is-info" :disabled="buttonDisabled" v-on:click="loadApp">Select</button>
+					</div>
+				</div>
+				<div class="notification is-warning" v-show="showCountryMessage">
+					<strong>Stay Tuned. </strong>Our services are not currently offered in your country, but please check back soon.
+				</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
