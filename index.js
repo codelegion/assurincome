@@ -22,6 +22,12 @@ app.get('/start', function(req, res) {
 	});
 });
 
+app.get('/checkout', function(req, res) {
+	res.sendFile('views/checkout.html', {
+		root: __dirname
+	});
+});
+
 app.post('/calculate', function(req, res) {
 
 	let args = [req.body.termLength, req.body.remitRate100M, req.body.remitRate10M, req.body.remitRate1M, req.body.remitRate100K, req.body.remitRate75K, req.body.remitRate50K];
